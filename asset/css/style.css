@@ -1,0 +1,312 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* icon and font */
+@font-face{
+    font-family: "kancil";
+    src: url('iconkancil.ttf');
+}
+/* end icon and font */
+/* custom */
+:root{
+    /* color */
+    --primary:#228c3a;
+    --dark:rgba(0,0,0,0.8);
+    --greycustom:rgba(187, 184, 184, 0.8);
+}
+.none{
+    display: none !important;
+}
+.block{
+    display: block !important;
+}
+.active-menu{
+    padding-bottom: 2.5px;
+    border-bottom: 1.5px solid var(--greycustom);
+    animation: tes 1s ease;
+}
+@keyframes tes{
+    0%{
+        opacity: 0.5;
+        transform: scale(0.5);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+.overlay{
+    display: none !important;
+}
+.activetes{
+    display: flex !important;
+}
+/* end custom */
+body{
+    overflow-x:hidden ;
+    font-family: monospace;
+}
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* header */
+.container-header{
+    display: flex;
+    align-content: center;
+    width: auto;
+    height: 11.87%;
+    background-color: var(--dark);
+    padding: 15px 5%;
+}
+.container-header .header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* logo */
+
+.container-header .header .logo{
+    width: 25%;
+}
+.container-header .header .logo .pict{
+    width: 125px;
+    height: 100%;
+}
+
+/* nav */
+
+.container-header .header nav{
+    margin:0px 5% 0px -5%;
+    width: 68%;
+}
+.container-header .header nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0px 35px 0px 15px;
+}
+.container-header .header nav ul li a{
+    margin: 5px;
+    font-family: sans-serif;
+    font-size:0.7em;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+/* btn box */
+
+.container-header .header .box-btn-form{
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+}
+.container-header .header .box-btn-form .btn-form{
+    border-radius: 25px;
+    border: 1px solid var(--greycustom);
+    padding: 15px 30px;
+    text-align: center;
+    margin: 5px 10px;
+}
+.container-header .header .box-btn-form .btn-form a{
+    text-decoration: none;
+    font-weight: bolder;
+    color:#ffffff;
+    width: 100%;
+}
+/* end header */
+
+/* content */
+.container-content{
+    display: flex;
+    align-content: center;
+    width: auto;
+    height: 11.87%;
+    padding: 15px 5%;
+}
+.container-content .content{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.container-content .content .box-produk1,
+.container-content .content .box-produk2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.produk{
+    box-shadow: 0px 3px 2px 2px var(--greycustom);
+    width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 10px auto;
+
+}
+.produk .thumb{
+    object-fit: cover;
+    object-position: top;
+    width: 200px;
+    height: auto;
+}
+.produk .box-detail{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+.produk .interface1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    height: 200px
+}
+.produk .box-detail .title-produk{
+    padding-top: 25px;
+    width: 200px;
+}
+.produk .box-detail .title-produk h3{
+    width: 140px;
+    float: right;
+}
+.produk .box-detail .btn-detail{
+    cursor: pointer;
+    width: 45px;
+    margin-bottom: 15px;
+}
+.produk .box-detail .btn-detail span{
+    padding: 15px;
+    background-color: var(--primary);
+}
+.produk .box-detail .btn-detail span::before{
+    font-family: "kancil";
+    content: '\e07c';
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.produk .interface2{
+    display: none;
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
+    background-color:var(--primary);
+}
+.produk .interface2 .btn-hidden-detail{
+    background: var(--primary);
+    position: relative;
+    left: 165px;
+    width: 35px;
+    height: 15px;
+    padding: 10px 0px;
+    z-index: 1;
+    cursor: pointer;
+    text-align: center;
+}
+.produk .interface2 .btn-hidden-detail .icon-panah-down::before{
+    font-family: "kancil";
+    content: '\e07a';
+    color: #ffffff;
+    font-weight: bolder;
+}
+.produk .interface2 .get-produk{
+    margin-top: -20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.produk .interface2 .get-produk h3{
+    font-style: oblique;
+}
+.produk .interface2 .get-produk .btn-detail{
+    border: 1px solid #ffffff;
+    padding: 10px 35px;
+    border-radius: 35px;
+} 
+.produk .interface2 .get-produk .btn-detail a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ /* setting produk2 */
+.container-content .content .box-produk2 {
+    display: none;
+}
+.container-content .content .box-produk2 .produk{
+    display: flex; 
+    flex-direction:column ;
+}
+.container-content .content .box-produk2 .produk .box-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-content .content .box-produk2 .produk .box-detail .title-produk h3{
+    width: 100%;
+    text-align: center;
+    border-bottom: 2.5px solid var(--greycustom);
+    padding-bottom: 25%;
+}
+.container-content .content .box-produk2 .produk .box-detail .btn-detail{
+    border: 1.5px solid var(--greycustom);
+    padding: 10px;
+    border-radius: 35px;
+}
+.container-content .content .box-produk2 .produk .box-detail .btn-detail a{
+    text-decoration: none;
+    color: var(--dark);
+}
+ /* end setting produk2 */
+ 
+
+/* btn page */
+
+.btn-page{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bolder;
+    flex-wrap: wrap;
+}
+.btn-page span{
+    margin: 10px 5px;
+    width: 35px;
+    padding: 10px 0px;
+    border: 1px solid var(--greycustom);
+    cursor: pointer;
+}
+.btn-page span a{
+    color: #000000;
+    text-decoration: none;
+}
+.btn-page .icon-back::before{
+    content: 'd';
+}
+.btn-page .icon-next::after{
+content: 'd';
+}
+/* custom btn */
+.active-btn{
+    background-color: var(--primary);
+    color: #ffffff;
+}
+/* end custom btn */
+
+/* end btn page */
+/* end content */
